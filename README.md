@@ -1,41 +1,39 @@
-# Website
+# Emporia Vue Local - Documentation Site
 
-This website is built using [Docusaurus](https://docusaurus.io/), a modern static website generator.
+This repository contains the source code for the Emporia Vue Local documentation website, built with [Docusaurus 3](https://docusaurus.io/).
 
-## Installation
+## Development
 
+### Prerequisites
+* Node.js (version 18 or higher)
+* pnpm (preferred) or npm/yarn
+
+### Installation
 ```bash
-yarn
+pnpm install
 ```
 
-## Local Development
-
+### Local Development
+Starts the development server with live reload.
 ```bash
-yarn start
+pnpm start
 ```
+Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-This command starts a local development server and opens up a browser window. Most changes are reflected live without having to restart the server.
-
-## Build
-
+### Build
+Builds the static site for production.
 ```bash
-yarn build
+pnpm build
 ```
+The static files will be generated in the `build` directory.
 
-This command generates static content into the `build` directory and can be served using any static contents hosting service.
+## Project Structure
+* `/docs` - Documentation markdown files (User Guide).
+* `/src` - React components and pages (e.g., the homepage).
+* `/static` - Static assets like images.
+* `docusaurus.config.ts` - Main configuration file.
 
-## Deployment
-
-Using SSH:
-
-```bash
-USE_SSH=true yarn deploy
-```
-
-Not using SSH:
-
-```bash
-GIT_USER=<Your GitHub username> yarn deploy
-```
-
-If you are using GitHub pages for hosting, this command is a convenient way to build the website and push to the `gh-pages` branch.
+## Contributing
+1.  Fork the repository.
+2.  Create a feature branch.
+3.  Submit a Pull Request.
