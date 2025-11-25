@@ -8,7 +8,7 @@ const config: Config = {
   title: "Local Control for Emporia Vue",
   tagline:
     "Unofficial ESPHome-based local control for your Emporia Vue energy monitor",
-  favicon: "img/favicon.ico",
+  favicon: "img/logo.svg",
 
   // Future flags, see https://docusaurus.io/docs/api/docusaurus-config#future
   future: {
@@ -71,9 +71,8 @@ const config: Config = {
       respectPrefersColorScheme: true,
     },
     navbar: {
-      title: "Emporia Vue Local",
+      title: "Local Control for Emporia Vue",
       logo: {
-        alt: "Emporia Vue Local Logo",
         src: "img/logo.svg",
       },
       items: [
