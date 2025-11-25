@@ -36,4 +36,3 @@ Clearly state support for Vue 2 and Vue 3.
 * [Flashing](2-flashing.md) - The software installation process.
 * [Configuration](3-configuration.md) - Explaining the YAML.
 * [Integrations](4-integrations.md) - What to do after the device is running.
-* [Troubleshooting](5-troubleshooting.md) - A dedicated place for "Help, it's not working."
