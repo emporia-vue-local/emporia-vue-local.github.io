@@ -5,34 +5,49 @@ title: Welcome
 
 # Local Control for Emporia Vue
 
-Brief explanation of what this project does (Local control for Emporia Vue).
+The Emporia Vue is an excellent piece of hardware for measuring your home's electrical consumption.
+Critically, it has a UL listing that proves that it has been designed and tested to be safe,
+something many hobbyist solutions lack.
 
-## ⚠️ SAFETY WARNING ⚠️
+The goal of this project, and this guide, is to help you get (unofficial) Open Source firmware
+running on your Emporia Vue so that you can control it locally from
+[Home Assistant](https://www.home-assistant.io/). This gets you
+
+- faster update times
+- fully offline function, with no internet requirement
+- the ability to automate your home based on your power consumption, to, for example, handle time-of-use billing
+
+It is an unofficial project, so you should not expect any support from Emporia on your flashed hardware.
+
 :::danger
-**Working with mains electricity is dangerous.**
-Large, bold warning about working with mains electricity.
+
+**Working with mains electricity is dangerous**
+
+You should not attempt flashing the board while it is connected to mains electricity, for both your and your computer's safety.
+
+Electrical panel work should only be done by a qualified person.
+
 :::
 
 ## Supported Hardware
-Clearly state support for Vue 2 and Vue 3.
-* [Vue 3 Specific Guide](1-hardware-prep.md)
+
+This project supports both the Emporia Vue 2 and the Emporia Vue 3.
 
 ## Prerequisites (Bill of Materials)
 
 ### Hardware list
-* USB UART
-* Jumper wires
-* Headers
-* Soldering iron
+
+- Emporia Vue, either v2 or v3
+- USB to serial converter module
+    - I tested this with a cheap & generic CH340G adapter
+- 4 male-to-female jumper wires
+- 4 male pcb-mount headers
+- Soldering iron & accessories
+    - [some recommendations here][soldering-iron]
+
+[soldering-iron]: https://web.archive.org/web/20250803172237/https://old.reddit.com/r/AskElectronics/wiki/soldering
 
 ### Software list
-* ESPHome
-* esptool
-* drivers
 
-## Quick Links / Navigation
-
-* [Hardware Preparation](1-hardware-prep.md) - Guide the user through the physical modification of the device and the electrical panel work.
-* [Flashing](2-flashing.md) - The software installation process.
-* [Configuration](3-configuration.md) - Explaining the YAML.
-* [Integrations](4-integrations.md) - What to do after the device is running.
+- [esptool.py](https://github.com/espressif/esptool) ([windows instructions](https://cyberblogspot.com/how-to-install-esptool-on-windows-10/), [generic instructions](https://docs.espressif.com/projects/esptool/en/latest/esp32/installation.html))
+- Working ESPHome installation [(see "Getting started")](https://esphome.io/)
