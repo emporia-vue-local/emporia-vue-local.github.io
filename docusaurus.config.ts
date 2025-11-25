@@ -55,7 +55,7 @@ const config: Config = {
         docs: {
           sidebarPath: "./sidebars.ts",
           editUrl:
-            "https://github.com/emporia-vue-local/emporia-vue-local.github.io",
+            "https://github.com/emporia-vue-local/emporia-vue-local.github.io/tree/main/",
         },
         blog: false,
         theme: {
