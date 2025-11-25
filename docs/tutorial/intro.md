@@ -1,7 +1,10 @@
 ---
 sidebar_position: 0
 title: Welcome
+pagination_next: null
 ---
+
+import Link from '@docusaurus/Link';
 
 # Local Control for Emporia Vue
 
@@ -51,3 +54,22 @@ This project supports both the Emporia Vue 2 and the Emporia Vue 3.
 
 - [esptool.py](https://github.com/espressif/esptool) ([windows instructions](https://cyberblogspot.com/how-to-install-esptool-on-windows-10/), [generic instructions](https://docs.espressif.com/projects/esptool/en/latest/esp32/installation.html))
 - Working ESPHome installation [(see "Getting started")](https://esphome.io/)
+
+## Next Steps
+
+Select your hardware version to continue:
+
+<div style={{display: 'flex', gap: '1rem', flexWrap: 'wrap', justifyContent: 'center', marginTop: '20px'}}>
+  <Link
+    className="pagination-nav__link"
+    to="./hardware-prep-v2">
+    <div className="pagination-nav__sublabel">Continue to</div>
+    <div className="pagination-nav__label">Hardware Prep for the Emporia Vue 2</div>
+  </Link>
+  <Link
+    className="pagination-nav__link"
+    to="./hardware-prep-v3">
+    <div className="pagination-nav__sublabel">Continue to</div>
+    <div className="pagination-nav__label">Hardware Prep for the Emporia Vue 3</div>
+  </Link>
+</div>

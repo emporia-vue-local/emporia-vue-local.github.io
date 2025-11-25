@@ -1,8 +1,10 @@
 ---
-sidebar_position: 1
+sidebar_position: 2
+pagination_prev: tutorial/intro
+pagination_next: tutorial/flashing
 ---
 
-# Hardware Preparation
+# Hardware Preparation (Vue 3)
 
 Guide the user through the physical modification of the device and the electrical panel work.
 
