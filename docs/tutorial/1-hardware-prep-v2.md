@@ -6,20 +6,7 @@ pagination_next: tutorial/flashing
 
 # Hardware Preparation (Vue 2)
 
-
-
-Guide the user through the physical modification of the device and the electrical panel work.
-
-## Panel Installation (Part 1)
-
-### Mapping circuits
-* The "Writing on tape" step.
-
-### Identifying phases and multipliers
-
-## Vue 2 Modification
-
-### Opening the case
+## Opening the case
 
 Use a small philips screwdriver to open the case. You will then need to solder a serial header onto the programming port, so that it looks like this:
 
