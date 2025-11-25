@@ -54,5 +54,12 @@
     "*.ts": "prettier",
     "*.md": "prettier",
     "*.yml": "prettier"
+  },
+  "pnpm": {
+    "onlyBuiltDependencies": [
+      "@swc/core",
+      "core-js",
+      "core-js-pure"
+    ]
   }
 }
