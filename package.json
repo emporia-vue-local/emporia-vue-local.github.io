@@ -52,6 +52,7 @@
   },
   "lint-staged": {
     "*.ts": "prettier",
-    "*.md": "prettier"
+    "*.md": "prettier",
+    "*.yml": "prettier"
   }
 }
