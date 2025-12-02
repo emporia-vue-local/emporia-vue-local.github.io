@@ -47,16 +47,7 @@ const config: Config = {
     },
   ],
 
-  themes: [
-    [
-      require.resolve("@easyops-cn/docusaurus-search-local"),
-      /** @type {import("@easyops-cn/docusaurus-search-local").PluginOptions} */
-      ({
-        hashed: true,
-        indexBlog: false,
-      }),
-    ],
-  ],
+
 
   presets: [
     [
@@ -76,6 +67,12 @@ const config: Config = {
   ],
 
   themeConfig: {
+    algolia: {
+      appId: "IR0ZBFA6BD",
+      apiKey: "b6c4e6f0386bedad74f773dea8457d5d",
+      indexName: "Local Control for Emporia Vue",
+      contextualSearch: true,
+    },
     // Replace with your project's social card
     image: "img/docusaurus-social-card.jpg",
     colorMode: {
