@@ -37,9 +37,9 @@ Successful completion of this step is _critical_ in case something goes wrong la
 
 :::
 
-Run the following in the console: `esptool.py -b 921600 read_flash 0 0x800000 flash_contents.bin`.
+Run the following in the console: `esptool --port /dev/ttyFIXME read-flash 0 ALL vue-orig-backup.bin`. Replace `ttyFIXME` with your serial port, and the rest of the connection details will be auto-detected.
 
-If the above command fails, try again using `esptool.py -b 115200 read_flash 0 0x800000 flash_contents.bin`. 
+If you're having trouble make sure that the TX/RX lines are correct, that you are grounding the GPIO0 pin before you provide DC voltage to the ESP32, and that your serial dongle can provide enough 3.3V/5V power that the ESP32 needs.
 
 :::info
 
@@ -72,3 +72,9 @@ Click "Install"
 Proceed to flash the board by clicking either "Plug into this computer" or "Plug into the computer running ESPHome Device Builder", as needed for your situation.
 
 ![the list of available install options](esphome-install-types.png)
+
+## Next steps
+
+If the basic ESPHome install seems happy running from DC power, you should be ready to proceed without needing the serial wires and physical bootloader mode. You can push the real configuration later using the OTA update mechanism.
+
+Reassemble your Vue, and follow the instructions to plug everything in & started up!

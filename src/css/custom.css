@@ -28,3 +28,29 @@
   --ifm-color-primary-lightest: #4fddbf;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
 }
+
+@media print {
+  /* Style for both table types when printing */
+  .data-collection-table th,
+  .data-collection-table td{
+    /* Target the text alignment for better visual layout */
+    text-align: center;
+
+    /* Set explicit thick black border for printing */
+    border: 2px solid #000 !important;
+
+    /* Ensure text is black for high contrast */
+    color: #000 !important;
+    background-color: #fff !important; /* Prevent background colors from printing */
+
+    /* Increase padding/height for writing room */
+    padding: 10px 15px;
+    min-height: 40px;
+  }
+
+  .data-collection-table th:nth-child(2),
+  .data-collection-table td:nth-child(2) {
+    min-width: 25em;
+  }
+
+}
