@@ -107,6 +107,27 @@ const config: Config = {
       darkTheme: prismThemes.dracula,
     },
   } satisfies Preset.ThemeConfig,
+
+  plugins: [
+    // Add this function to inject the loader rule
+    () => ({
+      name: 'resolve-raw-text',
+      configureWebpack(config, isServer) {
+        return {
+          module: {
+            rules: [
+              {
+                // Match the file extensions you want to load as raw strings
+                test: /\.(yaml)$/i,
+                // In Rspack/Webpack 5, use 'asset/source' to get the file content as a string
+                type: 'asset/source',
+              },
+            ],
+          },
+        };
+      },
+    }),
+  ],
 };
 
 export default config;

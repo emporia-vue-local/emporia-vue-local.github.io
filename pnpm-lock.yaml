@@ -23,6 +23,9 @@ importers:
       clsx:
         specifier: ^2.0.0
         version: 2.1.1
+      mustache:
+        specifier: ^4.2.0
+        version: 4.2.0
       prism-react-renderer:
         specifier: ^2.3.0
         version: 2.4.1(react@19.2.0)
@@ -3847,6 +3850,10 @@ packages:
 
   multicast-dns@7.2.5:
     resolution: {integrity: sha512-2eznPJP8z2BFLX50tf0LuODrpINqP1RVIm/CObbTcBRITQgmC/TjcREF1NeTBzIcR5XO/ukWo+YHOjBbFwIupg==}
+    hasBin: true
+
+  mustache@4.2.0:
+    resolution: {integrity: sha512-71ippSywq5Yb7/tVYyGbkBggbU8H3u5Rz56fH60jGFgr8uHwxs+aSKeqmluIVzM0m0kB7xQjKS6qPfd0b2ZoqQ==}
     hasBin: true
 
   nano-spawn@2.0.0:
@@ -10435,6 +10442,8 @@ snapshots:
     dependencies:
       dns-packet: 5.6.1
       thunky: 1.1.0
+
+  mustache@4.2.0: {}
 
   nano-spawn@2.0.0: {}
 

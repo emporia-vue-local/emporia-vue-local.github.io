@@ -17,7 +17,7 @@ Depending on legal requirements in your location and your experience level, you 
 
 ## Data collection
 
-You'll want to make sure that each clamp in your panel is installed with the arrow on it pointing in the direction of the current flow. If it isn't, it can be fixed in software with no harm done, but it is easier to get it right in the first place.
+You'll want to make sure that each clamp in your panel is installed with the arrow on it pointing in the direction of the current flow. This is to make things easier for later.
 
 For each clamp in your panel, you will want to record:
 
