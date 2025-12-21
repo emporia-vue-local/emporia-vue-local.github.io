@@ -2,6 +2,8 @@
 sidebar_position: 5
 ---
 
+# Configuration
+
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import CodeBlock from '@theme/CodeBlock';
