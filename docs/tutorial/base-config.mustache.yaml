@@ -65,6 +65,14 @@ wifi:
   {{/vue3}}
 
 {{#vue2}}
+output:
+  - platform: ledc
+    pin: GPIO12
+    id: buzzer
+  - platform: gpio
+    pin: GPIO27
+    id: buzzer_gnd
+
 rtttl:
   output: buzzer
   on_finished_playback:

@@ -6,16 +6,22 @@ sidebar_position: 4
 
 :::danger
 
-Mains electric can kill, especially with the limited protection in an electrical panel. This work should only be done by a qualified person.
+**Mains electric can kill**, especially with the limited protection in an electrical panel. This work
+should only be done by a qualified person. In certain locations, **you may be required by law to hire
+a licensed electrician for this work.**
 
 :::
 
 
 You'll want to install the clamps & wiring harness into your panel following the instructions [in the official Emporia installation manual](https://www.emporiaenergy.com/installation-guides).
 
-Depending on legal requirements in your location and your experience level, you may wish to hire an electrician to do this part.
-
 ## Data collection
+
+:::info
+
+You can print this page to help you collect this information.
+
+:::
 
 You'll want to make sure that each clamp in your panel is installed with the arrow on it pointing in the direction of the current flow. This is to make things easier for later.
 
@@ -25,8 +31,6 @@ For each clamp in your panel, you will want to record:
 - What circuit in the panel is it connected to?
 - What phase is it on?
 - For multi-pole breakers, the multiplier.
-
-You can print this page to help you collect this information:
 
 <table className="data-collection-table">
   <thead>
@@ -64,9 +68,6 @@ For each wire in the wiring harness, you'll want to note:
 
 - Which color cable matches which mains clamp?
 
-You can print this page to help you collect this information:
-
-
 <table className="data-collection-table">
   <thead>
     <tr>
@@ -82,18 +83,16 @@ You can print this page to help you collect this information:
 </table>
 
 
-
-
-
 ## Panel phases (USA)
 
 If you haven't seen a panel before, the concept of phases may be confusing. Here's what your typical American electrical panel looks like with the cover off:
 
-![Inside of a panel with the faceplate off, by Dixie2012 on Reddit.com](panel.jpeg)
+![Inside of a panel with the faceplate off, by Dixie2012 on Reddit.com. Color-coded by phase.](panel-coded.jpeg)
 
-Note how here are two thick wires coming in, one on the left, and another on the right. What's not so obvious is that each row in the panel only corresponds to one of these wires:
+Note how here are two thick wires coming in, one on the left, and another on the right. What's not 
+so obvious without the highlighting is that each row in the panel only corresponds to one of these
+wires. You can see that each circuit breaker plugs into a rib on the "bus bar", and how multi-pole
+(double wide) breakers plug into two different ribs.
 
-![Inside of a panel. color-coded by phase](panel-coded.jpeg)
-
-Each panel is different, so you can't just assume that your panel will follow the same layout. However, you can see that each circuit breaker plugs into a rib on the "bus bar", and how multi-pole (double wide) breakers plug into two different ribs.
-
+Each panel is different, so you can't just assume that your panel will follow the same layout.
+There should be a diagram or schematic either on a sticker in the panel cover or in the manual.

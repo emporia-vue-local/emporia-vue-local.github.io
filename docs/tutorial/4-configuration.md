@@ -59,13 +59,36 @@ We've broken out some [substitutions](https://esphome.io/components/substitution
 
 ## How it works
 
-There's a lot here, don't get overwhelmed! A lot of it is simply repeated 16x for each of the circuits. The general outline is:
+There's a lot here, don't get overwhelmed! A lot of it is simply repeated 16x for each of the circuits. The general flow is:
+
+```mermaid
+flowchart TD
+    subgraph Local Control for Emporia Vue
+        R["raw readings (240ms)"]
+    end
+    subgraph Home Assistant
+        S["smoothed power (5s)"]
+        D["daily integral (60s)"]
+    end
+
+    R --> S
+    R --> D
+```
+
+And the composite fields are:
+
+```
+total = A + B
+balance = total - (1 + 2 + 3 + … + 16)
+```
+
+ The general outline is:
 
 * per-circuit labels ([split out](https://esphome.io/guides/yaml/#substitutions) for convenience)
 * some shared filters (more on these later)
 * the core `emporia_vue` sensor configuration:
-    * starting with the per-phase A/B(/C) *voltage* monitoring [sometimes called L1/L2/L3 poles]
-    * followed by the per-phase A/B(/C) *current* sensing CTs  [again intended for the mains/poles into the panel]
+    * starting with the per-phase A/B(/C) *voltage* monitoring sometimes called L1/L2/L3 poles
+    * followed by the per-phase A/B(/C) *current* sensing CTs again intended for the mains/poles into the panel
     * and then the 16x individual circuit CT sensors (really the same, only indented differently, as the per-phase ones)
     * NOTE: all these subsensors update [every 240ms](https://github.com/emporia-vue-local/esphome/discussions/333)!
 * templates to prepare the readings for more efficient Home Assistant data collection:
@@ -74,17 +97,6 @@ There's a lot here, don't get overwhelmed! A lot of it is simply repeated 16x fo
     * also a `balance_power` template (which you can remove if not wanted) which subtracts the 16x individual from the A+B total [for comparison](https://github.com/emporia-vue-local/esphome/discussions/329)
 
 Note especially the `throttle_avg` we set up. This is optional, but since we get a reading every 240ms, it is helpful to average these readings together so that we don't need to store such dense, noisy, data in Home Assistant. Similarly note the "Total Power", "Total Daily Energy", and "Circuit x Daily Energy". These are needed for the Home Assistant energy system, which requires daily kWh numbers. These are (again optionally) processed through a customizable `throttle_time` filter so HA gets a reading every minute.
-
-Okay, so that's still a lot. The general flow is:
-
-```
-(Emporia-local)     (Copied to Home Assistant)
-  raw readings  -->  smoothed power (5s)
-    (240ms)     \->  daily integral (60s)
-
-total = A + B
-balance = total - (1 + 2 + 3 + … + 16)
-```
 
 ## Solar & Net metering
 

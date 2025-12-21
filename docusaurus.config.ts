@@ -39,15 +39,18 @@ const config: Config = {
 
   headTags: [
     {
-      tagName: 'meta',
+      tagName: "meta",
       attributes: {
-        name: 'algolia-site-verification',
-        content: '2C50783F6E46FA47',
+        name: "algolia-site-verification",
+        content: "2C50783F6E46FA47",
       },
     },
   ],
 
-
+  markdown: {
+    mermaid: true,
+  },
+  themes: ["@docusaurus/theme-mermaid"],
 
   presets: [
     [
@@ -111,7 +114,7 @@ const config: Config = {
   plugins: [
     // Add this function to inject the loader rule
     () => ({
-      name: 'resolve-raw-text',
+      name: "resolve-raw-text",
       configureWebpack(config, isServer) {
         return {
           module: {
@@ -120,7 +123,7 @@ const config: Config = {
                 // Match the file extensions you want to load as raw strings
                 test: /\.(yaml)$/i,
                 // In Rspack/Webpack 5, use 'asset/source' to get the file content as a string
-                type: 'asset/source',
+                type: "asset/source",
               },
             ],
           },

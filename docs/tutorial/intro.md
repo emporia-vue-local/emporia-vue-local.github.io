@@ -36,24 +36,46 @@ Electrical panel work should only be done by a qualified person.
 
 This project supports both the Emporia Vue 2 and the Emporia Vue 3.
 
-## Prerequisites (Bill of Materials)
+## What you need
 
-### Hardware list
-
+- Working ESPHome installation [(see "Getting started")](https://esphome.io/)
+- The [esptool](https://github.com/espressif/esptool) utility ([windows instructions](https://cyberblogspot.com/how-to-install-esptool-on-windows-10/), [generic instructions](https://docs.espressif.com/projects/esptool/en/latest/esp32/installation.html))
 - Emporia Vue, either v2 or v3
-- USB to serial converter module
-    - I tested this with a cheap & generic CH340G adapter
-- 4 male-to-female jumper wires
-- 4 male pcb-mount headers
+- USB to serial converter module (cheap & generic CH340G adapter should work, ideally with CTS+DTR pins)
+
+## Flashing tools
+
+All of these are valid options, but different people will have different skill levels and different tools already on hand.
+Use whichever technique is most convinent for you.
+
+### Solder headers (Vue 2)
+
+- 4 to 6 male-to-female jumper wires
+- 4 to 6 male pcb-mount headers
 - Soldering iron & accessories
-    - [some recommendations here][soldering-iron]
+  - [some recommendations here][soldering-iron]
 
 [soldering-iron]: https://web.archive.org/web/20250803172237/https://old.reddit.com/r/AskElectronics/wiki/soldering
 
-### Software list
+### Clip technique (Vue 2)
 
-- [esptool.py](https://github.com/espressif/esptool) ([windows instructions](https://cyberblogspot.com/how-to-install-esptool-on-windows-10/), [generic instructions](https://docs.espressif.com/projects/esptool/en/latest/esp32/installation.html))
-- Working ESPHome installation [(see "Getting started")](https://esphome.io/)
+See [clowrey's community post for details.](https://github.com/emporia-vue-local/esphome/discussions/53)
+
+- [7 pin pogo pin adapter](https://www.aliexpress.us/item/3256803519317326.html)
+
+### BDM Frame (Vue 2, Vue 3)
+
+See [digiblur's guide here. It's for different device, but the concept is the same.](https://digiblur.com/wiki/devices/plugs/wyze_plug_outdoor_wlppo1/#how-to-flash-esphome-or-tasmota)
+
+Ideally you would want a BDM frame with 6 probes.
+
+### Soldering (Vue 3)
+
+You can carefully solder on jumper wires but note that the pads are fragile!
+
+- 4 to 6 male-to-female jumper wires
+- Soldering iron & accessories
+  - [some recommendations here][soldering-iron]
 
 ## Next Steps
 
