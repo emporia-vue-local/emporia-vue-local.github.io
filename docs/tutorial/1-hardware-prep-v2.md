@@ -51,7 +51,7 @@ Pry the lever on one of the jumper cables up using a pencil or a needle or some 
 
 Plug in the unmodified end of the cable into the IO0 pin of the Emporia Vue 2, and tape down (or, less ideally, hold) the other end onto the shield
 
-![photo of connected jumpers](https://i.imgur.com/TmB5PPV.jpeg)
+![photo of connected jumpers](./ground-jumper-3.jpeg)
 
 ## Connect power
 
