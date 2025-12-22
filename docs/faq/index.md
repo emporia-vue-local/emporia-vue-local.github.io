@@ -1,5 +1,5 @@
 ---
-sidebar_position: 1
+sidebar_position: 7
 ---
 
 # FAQ
@@ -30,10 +30,6 @@ When you're done troubleshooting, remember to place the filters back.
 
 - You may have put that clamp on the wire backwards
 - You may have selected the wrong phase in the configuration
-
-## I've recorded negative energy values and I want to reset them
-
-Sensor values are saved to the esp32 flash. You can reset all sensors by implementing a [factory reset button](https://esphome.io/components/button/factory_reset.html).
 
 ## The readings on one or two of my sensors are crazy
 
