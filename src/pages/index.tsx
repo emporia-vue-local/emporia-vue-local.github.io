@@ -36,7 +36,7 @@ export default function Home(): ReactNode {
     <Layout
       title={`${siteConfig.title}`}
       description={"Unofficial ESPHome-based local control for your Emporia Vue energy monitor, " +
-        "which adds allows for offline use, integrates with Home Assistant, and is fully open-source."}
+        "which allows for offline use, integrates with Home Assistant, and is fully open-source."}
     >
       <HomepageHeader />
       <main>
