@@ -16,13 +16,13 @@ Follow the instructions for your specific hardware:
 <div style={{display: 'flex', gap: '1rem', flexWrap: 'wrap', justifyContent: 'center', marginTop: '20px'}}>
   <Link
     className="pagination-nav__link"
-    to="./hardware-prep-v2">
+    to="/docs/tutorial/hardware-prep-v2/">
     <div className="pagination-nav__sublabel">Continue to</div>
     <div className="pagination-nav__label">Hardware Prep for the Emporia Vue 2</div>
   </Link>
   <Link
     className="pagination-nav__link"
-    to="./hardware-prep-v3">
+    to="/docs/tutorial/hardware-prep-v3/">
     <div className="pagination-nav__sublabel">Continue to</div>
     <div className="pagination-nav__label">Hardware Prep for the Emporia Vue 3</div>
   </Link>
