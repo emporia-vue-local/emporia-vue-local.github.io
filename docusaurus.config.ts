@@ -9,6 +9,7 @@ const config: Config = {
   tagline:
     "Unofficial ESPHome-based local control for your Emporia Vue energy monitor",
   favicon: "img/logo.svg",
+  trailingSlash: true,
 
   // Future flags, see https://docusaurus.io/docs/api/docusaurus-config#future
   future: {
