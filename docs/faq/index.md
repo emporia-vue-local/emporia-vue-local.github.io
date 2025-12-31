@@ -26,6 +26,35 @@ If you're seeing negative data, it could be a few things:
 
 When you're done troubleshooting, remember to place the filters back.
 
+## I have unused / unplugged / open clamps
+
+If a clamp isn't used or isn't installed, remove its entry from the `ct_clamps` list and delete any expressions or templates that reference it.
+
+For example, if you remove `cir16`, update any math that still references it:
+
+```diff
+   - platform: template
+     lambda: !lambda |-
+       return max(0.0f, id(total_power).state -
+         id( cir1).state -
+         id( cir2).state -
+         id( cir3).state -
+         id( cir4).state -
+         id( cir5).state -
+         id( cir6).state -
+         id( cir7).state -
+         id( cir8).state -
+         id( cir9).state -
+         id(cir10).state -
+         id(cir11).state -
+         id(cir12).state -
+         id(cir13).state -
+         id(cir14).state -
+-        id(cir15).state -
+-        id(cir16).state);
++        id(cir15).state);
+```
+
 ## I'm getting negative values
 
 - You may have put that clamp on the wire backwards
@@ -33,11 +62,13 @@ When you're done troubleshooting, remember to place the filters back.
 
 ## The readings on one or two of my sensors are crazy
 
-Sometimes the CTs aren't fully plugged into the 3.5mm jacks on the Vue. It's often not an issue with the initial install, but with stuff getting jostled around as you put things back together.
+Sometimes the CTs aren't fully plugged into the 3.5mm jacks on the Vue 2. It's often not an issue with the initial install, but with stuff getting jostled around as you put things back together.
 
 This issue will often manifest as jumps between 0W and some other wattage for no reason.
 
 Open up the panel, and make sure every connector is fully inserted into the Vue. Check if the problem is solved before putting the panel cover back on.
+
+Alternatively, if you intend to leave certain slots empty, you'll need to see ["I have unused / unplugged / open clamps"](#i-have-unused--unplugged--open-clamps).
 
 ## My data readings go up and down
 

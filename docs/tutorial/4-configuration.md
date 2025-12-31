@@ -43,6 +43,7 @@ We've broken out some [substitutions](https://esphome.io/components/substitution
     * note that the suggested filters also [truncate out noise](https://github.com/emporia-vue-local/esphome/discussions/354) that would lead to negative energy readings. for solar or other generation this may not be what you want!
 * if you want to adjust the reading, e.g. it is common to `multiply: 2` if you are monitoring half of a double-pole breaker
     * compare [this alternative](https://github.com/emporia-vue-local/esphome/discussions/55#discussioncomment-5018829) wiring
+* if a CT clamp is unused, remove its entry from `ct_clamps` and delete any template expressions that reference it (see [the FAQ](/docs/faq/#i-have-unused--unplugged--open-clamps))
 
 <Tabs groupId="vue-version">
   <TabItem value="vue2" label="Emporia Vue Gen 2">
