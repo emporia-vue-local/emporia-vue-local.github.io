@@ -80,7 +80,7 @@ const config: Config = {
     algolia: {
       appId: "IR0ZBFA6BD",
       apiKey: "b6c4e6f0386bedad74f773dea8457d5d",
-      indexName: "Local Control for Emporia Vue",
+      indexName: "main",
       contextualSearch: true,
     },
     // Replace with your project's social card
