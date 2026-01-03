@@ -46,6 +46,13 @@ const config: Config = {
         content: "2C50783F6E46FA47",
       },
     },
+    {
+      tagName: "meta",
+      attributes: {
+        name: "google-site-verification",
+        content: "TAJOF2Sp_mA2bUF5KHF4KDSx5DWl90tm3ob9eB69KXw",
+      },
+    },
   ],
 
   markdown: {
